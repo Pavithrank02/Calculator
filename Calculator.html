@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Calculator</title>
+        <style>
+    
+            fieldset {
+                display: inline-block;
+            }
+            .textfield {
+                width: 200px;
+            }
+            button {
+            margin: 3px;
+            
+            height: 40px;
+            width: 40px;
+           }
+           .fields {
+            margin: 5px;
+           }
+           .number {
+            margin-bottom: -4px;
+            margin-left: -5px;
+            padding: 5px;
+        
+           }
+             
+        </style>
+    </head>
+    <body>
+        <fieldset>
+            <div class="textfield">
+                <input  type="text" placeholder="0" id="output-screen"/>
+            </div>
+            <div class="fields" >
+                    <button onclick="display('1')">1</button>
+                    <button onclick="display('2')">2</button>
+                    <button onclick="display('3')">3</button>
+                    <button onclick="display('4')">4</button><br>
+                    <button onclick="display('5')">5</button>
+                    <button onclick="display('6')">6</button>
+                    <button onclick="display('7')">7</button>
+                    <button onclick="display('8')">8</button><br>
+                    <button onclick="display('9')">9</button>
+                    <button onclick="display('0')">0</button>
+                    <button onclick="display('.')">.</button>
+                    <button onclick="Calculate()">=</button>   <br>             
+                    <button onclick="display('+')">+</button>
+                    <button onclick="display('-')">-</button>
+                    <button onclick="display('*')">*</button>
+                    <button onclick="display('/')">/</button><br>
+                    <button onclick="Clear()">clr</button>
+                    <button onclick="Del()">del</button>
+                </div>
+        </fieldset>
+        <script>
+            const numbers = document.getElementById('output-screen');
+            
+            function display(num) {
+                numbers.value += num;
+            }
+
+            function Calculate() {
+            const val = document.getElementById('output-screen').value;
+            val.value = eval(val.value);
+            }
+
+            function Clear() {
+                numbers.value = " ";
+            }            
+            
+            function Del() {
+                const del = document.getElementById('output-screen').value;
+                del.value = -1;
+            }
+    
+        </script>
+
+    </body>
+</html>
