@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Practice</title>
+    <style>
+      .container {
+        display: inline-block;
+        padding-top: 15px;
+        height: 150px;
+        width: 200px;
+      }
+
+      button {
+        margin-top: 50px;
+        height: 50px;
+        width: 90px;
+      }
+    </style>
+  </head>
+  <body>
+    <fieldset class="container">
+      <div id="result"></div>
+      <div>
+        <button onclick="increment()">Increment</button>
+        <button onclick="decrement()">Decrement</button>
+      </div>
+    </fieldset>
+    <script>
+      const click = document.getElementById("result");
+      let counter = 0;
+      function increment() {
+        counter+=1;
+        document.getElementById('result').innerHTML = counter;
+
+      }
+      function decrement() {
+        counter-=1;
+        document.getElementById('result').innerHTML = counter;
+      }
+    </script>
+  </body>
+</html>
