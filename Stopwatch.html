@@ -1,43 +1,46 @@
 <!DOCTYPE html>
 <html lang en>
-    <head>
-        <title>Stopwat     ch</title>
-    </head>
-    <style>
-        fieldset {
-            width: 300px;
-            height: 150px;
-            background-color: yellow;
-            border-radius: 10px;
-            border-color: yellow;
-           
-        }
-        div {
-            display: flex;            
-            justify-content: center;
-            justify-content: space-between;
-        }
-        button {
-            width: 80px;
-            height: 50px;  
-        }
-        p {
-            font-size: 20px;
-            text-align: center;
-        }
-    </style>
-    <body>
-        <fieldset>
-            <p>0:00</p>
-            <div>
-                <button onclick="Start()">Start</button>
-                <button onclick="Start()">Stop</button>
-                <button onclick="Start()">Reset</button>
-            </div>
-           
-        </fieldset>
-        <script>
-
-        </script>
-    </body>
-    </html>
+  <head>
+    <title>Stopwat ch</title>
+  </head>
+  <style>
+    fieldset {
+      width: 300px;
+      height: 150px;
+      background-color: yellow;
+      border-radius: 10px;
+      border-color: yellow;
+    }
+    div {
+      display: flex;
+      justify-content: center;
+      justify-content: space-between;
+    }
+    button {
+      width: 80px;
+      height: 50px;
+    }
+    p {
+      font-size: 20px;
+      text-align: center;
+    }
+  </style>
+  <body>
+    <fieldset>
+      
+      <div id="timing">
+        <button onclick="start()">Start</button>
+        <button onclick="stop()">Stop</button>
+        <button onclick="reset()">Reset</button>
+      </div>
+    </fieldset>
+    <script>
+      function start() {
+        let h = 0;
+        let tim = new Date();
+         h = tim.getSeconds();
+        console.log(h);
+      }
+    </script>
+  </body>
+</html>
